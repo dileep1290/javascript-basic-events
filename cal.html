@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #out{
+            background-color: teal;
+            padding: 20px;
+            margin: 10px;
+            width: 120px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 5px;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body style="padding: 20px;">
+    <input type="text" name="First-Value" id="first" value="" placeholder="Enter First Value">
+    <input type="text" name="econd-Value" id="second" value="" placeholder="Enter Second Value">
+    <hr style="margin-right: 50%;">
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Divide</button>
+    <div id="out">Result</div>
+</body>
+</html>
+<script>
+    function add(){
+        let fv1 = parseInt(document.getElementById("first").value);
+        let sv2 = parseInt(document.getElementById("second").value);
+        let tot = fv1 + sv2;
+        document.getElementById("out").innerHTML = "Result " + tot;
+    }
+
+    function sub(){
+        let fv1 = parseInt(document.getElementById("first").value);
+        let sv2 = parseInt(document.getElementById("second").value);
+        let tot = fv1 - sv2;
+        document.getElementById("out").innerHTML = "Result" + tot;
+    }
+
+    function mul(){
+        let fv1 = parseInt(document.getElementById("first").value);
+        let sv2 = parseInt(document.getElementById("second").value);
+        let tot = fv1 * sv2;
+        document.getElementById("out").innerHTML = "Result" + tot;
+    }
+    function div(){
+        let fv1 = parseInt(document.getElementById("first").value);
+        let sv2 = parseInt(document.getElementById("second").value);
+        let tot = fv1 / sv2;
+        document.getElementById("out").innerHTML = "Result" + tot;
+    }
+</script>
